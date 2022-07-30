@@ -73,5 +73,4 @@ while True:
             sys.exit(1)
 #Ctrl+c still kills threads
         print("CTRL+C to stop attack")
-            sys.exit(1)
 		if __name__ == '__main__':

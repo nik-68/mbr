@@ -64,4 +64,5 @@ while True:
 	
 #Ctrl+c still kills threads
 while True:
-time.sleep(0.5)
+time.sleep(1)
+print("CTRL+C to stop attack")

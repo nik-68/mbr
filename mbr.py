@@ -1,5 +1,3 @@
-# Saphyra - iDDoS Priv8 Tool
-
 import urllib2
 import sys
 import threading

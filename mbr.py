@@ -64,4 +64,4 @@ while True:
 	
 #Ctrl+c still kills threads
 while True:
-time.sleep(1)
+time.sleep(0.5)

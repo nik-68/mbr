@@ -63,7 +63,6 @@ while True:
         print(pink + f"[LOG] PACKETS {error}")
         "print(cyan + f( DDoS)"
 	
-	def run_program():
     while True:
         time.sleep(1)
         print("a")
@@ -82,4 +81,4 @@ except KeyboardInterrupt:
     # store the original SIGINT handler
     original_sigint = signal.getsignal(signal.SIGINT)
     signal.signal(signal.SIGINT, exit_gracefully)
-    run_program()
+  

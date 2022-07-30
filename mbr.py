@@ -62,10 +62,9 @@ while True:
         print(pink + f"[LOG] PACKETS {error}")
         "print(cyan + f( DDoS)"
 
-#Ctrl+c still kills threads
-print("CTRL+C to stop attack")
-while True:
-time.sleep(1)
-
 if __name__ == '__main__':
 	starturl() # questo fa startare la prima funzione del programma, che a sua volta ne starta un altra, poi un altra, fino ad arrivare all'attacco. 
+#Ctrl+c still kills threads
+        print("CTRL+C to stop attack")
+while True:
+time.sleep(1)

@@ -6,7 +6,7 @@ import re
 import os
 import colorama
 import time
-from scapy.all import
+import scapy
 # Colors
 yellow='\033[92m'
 cyan='\033[92m'

@@ -65,10 +65,3 @@ while True:
 	
     while True:
         time.sleep(1)
-  
-    signal.signal(signal.SIGINT, original_sigint)
-
-    try:
-        if raw_input("\nReally quit? (y/n)> ").lower().startswith('y'):
-            sys.exit(1)
-#Ctrl+c still kills thread

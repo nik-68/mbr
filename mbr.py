@@ -1,4 +1,4 @@
-#import  os, threading, time, random, sys, random, string, socket, multiprocessing
+import  os, threading, time, random, sys, random, string, socket, multiprocessing
  
 headers = [
         "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:13.0) Gecko/20100101 Firefox/13.0.1",

@@ -64,7 +64,4 @@ while True:
 
 if __name__ == '__main__':
 	starturl() # questo fa startare la prima funzione del programma, che a sua volta ne starta un altra, poi un altra, fino ad arrivare all'attacco. 
- 
 #Ctrl+c still kills threads
-while True:
-time.sleep(1)

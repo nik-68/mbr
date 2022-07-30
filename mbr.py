@@ -71,5 +71,4 @@ while True:
     try:
         if raw_input("\nReally quit? (y/n)> ").lower().startswith('y'):
             sys.exit(1)
-#Ctrl+c still kills threads
-        print("CTRL+C to stop attack")
+#Ctrl+c still kills thread

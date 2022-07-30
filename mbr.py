@@ -65,8 +65,6 @@ while True:
 	
     while True:
         time.sleep(1)
-        print("a")
-	def exit_gracefully(signum, frame):
   
     signal.signal(signal.SIGINT, original_sigint)
 
@@ -78,7 +76,3 @@ except KeyboardInterrupt:
         print("CTRL+C to stop attack")
             sys.exit(1)
 		if __name__ == '__main__':
-    # store the original SIGINT handler
-    original_sigint = signal.getsignal(signal.SIGINT)
-    signal.signal(signal.SIGINT, exit_gracefully)
-  

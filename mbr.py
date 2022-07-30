@@ -1,6 +1,9 @@
 import colorama
 import threading
 import requests
+import os
+import sys
+import time
 # Colors
 yellow='\033[92m'
 cyan='\033[92m'

@@ -20,6 +20,7 @@ import random
 import os
 import sys
 import time
+import signal
 import undetected_chromedriver
 # Colors
 yellow='\033[92m'
@@ -62,7 +63,23 @@ while True:
         print(pink + f"[LOG] PACKETS {error}")
         "print(cyan + f( DDoS)"
 	
+	def run_program():
+    while True:
+        time.sleep(1)
+        print("a")
+	def exit_gracefully(signum, frame):
+  
+    signal.signal(signal.SIGINT, original_sigint)
+
+    try:
+        if raw_input("\nReally quit? (y/n)> ").lower().startswith('y'):
+            sys.exit(1)
 #Ctrl+c still kills threads
-while True:
-time.sleep(1)
-print("CTRL+C to stop attack")
+except KeyboardInterrupt:
+        print("CTRL+C to stop attack")
+            sys.exit(1)
+		if __name__ == '__main__':
+    # store the original SIGINT handler
+    original_sigint = signal.getsignal(signal.SIGINT)
+    signal.signal(signal.SIGINT, exit_gracefully)
+    run_program()
